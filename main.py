@@ -2,7 +2,7 @@
 # main.py
 # ?
 #
-# None
+# Jonatan H Sundqvist
 # August 13 2015
 #
 

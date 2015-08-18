@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"pixe",
+				"pixels"
+			],
+			[
+				"re",
+				"revealed"
+			],
+			[
+				"secret",
+				"secretimage"
+			],
+			[
+				"px",
+				"pixelstream"
+			],
+			[
+				"pixel",
+				"pixelstream"
+			],
+			[
+				"chunk",
+				"chunksize"
+			],
+			[
 				"chun",
 				"chunksize"
 			],
@@ -490,30 +514,6 @@
 			[
 				"va",
 				"validInput"
-			],
-			[
-				"pr",
-				"println	SystemOutPrintln"
-			],
-			[
-				"pal",
-				"chooseFromPalette"
-			],
-			[
-				"rand",
-				"randomColour"
-			],
-			[
-				"ran",
-				"randomColour"
-			],
-			[
-				"m",
-				"main	method (main)"
-			],
-			[
-				"bor",
-				"BorderFactory"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "main.py",
 			"settings":
 			{
-				"buffer_size": 3134,
+				"buffer_size": 5756,
 				"line_ending": "Windows"
 			}
 		}
@@ -603,17 +603,29 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 197.0,
-		"last_filter": "save as",
+		"height": 392.0,
+		"last_filter": "co",
 		"selected_items":
 		[
 			[
-				"save as",
-				"Project: Save As"
+				"co",
+				"Git: Commit"
+			],
+			[
+				"ad",
+				"Git: Add..."
+			],
+			[
+				"key",
+				"Preferences: Key Bindings - Default"
 			],
 			[
 				"add fo",
 				"Project: Add Folder"
+			],
+			[
+				"save as",
+				"Project: Save As"
 			],
 			[
 				"buil",
@@ -630,14 +642,6 @@
 			[
 				"pyth",
 				"Set Syntax: Python"
-			],
-			[
-				"co",
-				"Git: Commit"
-			],
-			[
-				"ad",
-				"Git: Add..."
 			],
 			[
 				"impr",
@@ -1004,10 +1008,6 @@
 				"Preferences: Settings - Default"
 			],
 			[
-				"key",
-				"Preferences: Key Bindings - Default"
-			],
-			[
 				"project",
 				"Project: Save As"
 			],
@@ -1171,8 +1171,13 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/C/Users/Jonatan/Desktop/Haskell/projects/Steganographer"
+	],
 	"file_history":
 	[
+		"/C/Users/Jonatan/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
 		"/C/Users/Jonatan/AppData/Roaming/Sublime Text 3/Packages/User/build/PythonPrompt.sublime-build",
 		"/C/Users/Jonatan/Dropbox/Jon & Jay/Python/Steganorific/steg.py",
 		"/C/Users/Jonatan/Desktop/Python/projects/Hangman/main.py",
@@ -1299,8 +1304,7 @@
 		"/C/Users/Jonatan/Desktop/Haskell/modules/Southpaw/WaveFront/Parsers.hs",
 		"/C/Users/Jonatan/Desktop/Haskell/modules/Southpaw-0.1.0.0.tar.gz",
 		"/C/Users/Jonatan/Desktop/Haskell/projects/Copernicus/Copernicus.hs",
-		"/C/Users/Jonatan/Desktop/Haskell/projects/Copernicus/colours.txt",
-		"/C/Users/Jonatan/Desktop/Python/upload.py"
+		"/C/Users/Jonatan/Desktop/Haskell/projects/Copernicus/colours.txt"
 	],
 	"find":
 	{
@@ -1319,6 +1323,43 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"result['revealed']",
+			"result",
+			"chunksize",
+			"=",
+			"indent",
+			"uncovered",
+			"canvas",
+			"uncovered",
+			", ",
+			"\\w\\n\\n\\n\\n\\w",
+			"\\w\\n\\n\\n\\w",
+			"pixelstream",
+			"size",
+			"uncovered",
+			"=",
+			"=8",
+			"uncovered",
+			"chunksize",
+			"size",
+			", ",
+			"revealed",
+			"hidden",
+			"chr",
+			"ord",
+			"[x",
+			"size",
+			"ch",
+			"uncovered",
+			"ch",
+			"im",
+			"Im",
+			"im",
+			"stream",
+			"p",
+			"sainte-victoire-hidden-text",
+			"hidden",
+			"size",
 			"/",
 			"#",
 			"  #",
@@ -1409,49 +1450,12 @@
 			"textures\\",
 			", ",
 			"V3",
-			"height",
-			"/",
-			"\"C:/",
-			"Texture",
-			"texture",
-			"5",
-			"wyi",
-			"wxi",
-			"69",
-			"=",
-			".5",
-			"round",
-			"float ",
-			"cint",
-			"cyi",
-			"c",
-			"id",
-			"euclidean v v",
-			"main",
-			"put",
-			"texture",
-			"defaultMatrixUniforms",
-			"transpose ",
-			"print",
-			"show",
-			"print",
-			"glUniformMatrix4fv",
-			"mat",
-			"UMatrix44",
-			"mat",
-			"UMatrix44",
-			"print",
-			"2",
-			"polygon",
-			"argument",
-			"mag",
-			"magnitude",
-			"Vector"
+			"height"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
 			"",
@@ -1492,15 +1496,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3134,
+						"buffer_size": 5756,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2053,
-								2053
+								996,
+								996
 							]
 						],
 						"settings":
@@ -1509,7 +1513,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1739.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
