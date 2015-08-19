@@ -8,6 +8,7 @@
 
 # TODO | - Allow encoding and decoding of arbitrary byte sequences
 #        - Documentation, test coverage
+#        - Get rid of imagesize argument, figure out size from pixel access object (?)
 
 # SPEC | -
 #        -
@@ -23,10 +24,12 @@ from itertools import chain, islice
 def bitchunks(n, size, chunksize):
 
 	'''
-	Docstring goes here
+	Subdivides a number {n} of 'size' bits into evenly sized chunks. The result is a generator
+	with {size}//{chunksize} elements. 
 
 	'''
 
+	# TODO: Rename arguments (?)
 	# assert size % chunksize is 0, 'Chunks don\'t fit.'
 	# assert n <= 2**size,          'Number {0} doesn\'t fit inside {1} bits.'.format(n, size)
 	mask = 2**chunksize - 1
@@ -37,7 +40,7 @@ def bitchunks(n, size, chunksize):
 def unbitchunks(chunks, size, chunksize):
 
 	'''
-	Docstring goes here
+	The inverse of {bitchunks} (cf. related documentation).
 
 	'''
 
@@ -49,7 +52,7 @@ def unbitchunks(chunks, size, chunksize):
 def pixelstream(pixels, imagesize):
 
 	'''
-	Docstring goes here
+	Yields each pixel in {pixels} along with its (x, y) position, going downwards and then towards the right.
 
 	'''
 
@@ -59,14 +62,15 @@ def pixelstream(pixels, imagesize):
 
 
 
-def setbits(n, bits, size=2):
+def setbits(n, bits, size):
 
 	'''
-	Docstring goes here
+	Sets the last 'size' digits of the number 'n' to 'bits'.
 
 	'''
 
-	# TODO: Parameters (not just last two bits)
+	# TODO: Parameters (not just last two bits) (✓)
+	# TODO: Rename arguments (?)
 	# TODO: Validate arguments
 	# TODO: Test
 	# assert bits <= 2**size, '{n} doesn\'t fit in {size} bits.'.format(n=n, size=size)
@@ -77,7 +81,7 @@ def setbits(n, bits, size=2):
 def hide(image, data, encode, size, chunksize):
 
 	'''
-	Hides data in the last two bits of the blue channel
+	Hides data in the last {chunksize} bits of the blue channel
 
 	'''
 
@@ -85,6 +89,7 @@ def hide(image, data, encode, size, chunksize):
 	# TODO: Ensure that data fits in image
 	# TODO: Return stats (?)
 	# TODO: Tweak parameters
+	# TODO: Elaborate docs
 
 	stream = chain(*[bitchunks(encode(c), size, chunksize) for c in data]) # Iterator over bit chunks
 	pixels = image.load()
@@ -99,7 +104,7 @@ def hide(image, data, encode, size, chunksize):
 def bitstream(pixels, size, imagesize):
 
 	'''
-	Docstring goes here
+	Yields the last {size} bits of the blue channel of each pixel. The order is determined by {pixelstream}.
 
 	'''
 
@@ -121,7 +126,7 @@ def unhide(image, length, decode, size, chunksize):
 def bitchunkSuite():
 	
 	'''
-	Docstring goes here
+	Some tests I wrote to visually inspect a few bit-twiddling functions defined in this module.
 
 	'''
 
@@ -144,10 +149,15 @@ def bitchunkSuite():
 def hideunhide(data, length, targetimage, encode, decode, pack, unpack, size, chunksize):
 
 	'''
-	Docstring goes here
+	This function {encode}s the {data} with the given function, embeds it in the {targetimage},
+	and proceeds to undo this process with the help of the {decode} and {unpack} functions.
+
+	Needless to say, spies and forgers should steer clear of this function, as it is only useful
+	for debugging and testing. Unless they happen to be interested in that stuff.
 
 	'''
 
+	# TODO: Testing, checking arguments (eg. encode should be the inverse of decode) (?)
 	# TODO: Make copy of target image (?)
 	# TODO: Compute length automatically (?)
 	hidden   = hide(targetimage, pack(data), encode=encode, size=size, chunksize=chunksize)
@@ -174,7 +184,7 @@ def hideunhide(data, length, targetimage, encode, decode, pack, unpack, size, ch
 def unpackImage(pixelstream, imagesize):
 
 	'''
-	Docstring goes here
+	Creates a new image, given an {imagesize} and a {pixelstream}.
 
 	'''
 
@@ -191,7 +201,7 @@ def unpackImage(pixelstream, imagesize):
 def main():
 
 	'''
-	Docstring goes here
+	Runs some steganography tests on image and text data.
 
 	'''
 
